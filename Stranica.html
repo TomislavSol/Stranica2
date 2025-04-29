@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Računalne Komponente</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .logo-login {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e0ecf8;
+      padding: 15px 30px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .login a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    .login {
+      background-color: #e74c3c;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .top-nav {
+      background-color: #d0e7d2;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .top-nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .top-nav a:hover {
+      color: #e74c3c;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+    }
+    .content {
+      flex: 3;
+      padding: 20px;
+      background-color: #ecf7e0;
+      margin-right: 20px;
+    }
+    .content-box {
+      background-color: #e74c3c;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+    }
+    .sidebar {
+      flex: 1;
+      background-color: #e8e5f4;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .sidebar-box {
+      background-color: #e74c3c;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .footer {
+      background-color: #ccc;
+      padding: 15px;
+      text-align: center;
+    }
+    @media(max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+      .content {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-login">
+      <div class="logo">TechStore</div>
+      <div class="login">
+        <a href="#">Prijava</a> | <a href="#">Registracija</a>
+      </div>
+    </div>
+    <div class="top-nav">
+      <a href="#pocetna">Početna</a>
+      <a href="#komponente">Komponente</a>
+      <a href="#novosti">Novosti</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="main" id="pocetna">
+      <div class="content" id="komponente">
+        <div class="content-box">
+          Dobrodošli! Upoznajte se s ključnim računalnim komponentama:
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>Procesor (CPU)</h3>
+            <p>"Mozak" računala, izvršava naredbe softvera.</p>
+          </div>
+          <div class="card">
+            <h3>Grafička kartica (GPU)</h3>
+            <p>Odgovorna za prikaz slike i video sadržaja.</p>
+          </div>
+          <div class="card">
+            <h3>Radna memorija (RAM)</h3>
+            <p>Privremeno pohranjuje podatke za brzi pristup.</p>
+          </div>
+          <div class="card">
+            <h3>Pohrana (SSD/HDD)</h3>
+            <p>Trajno pohranjuje operativni sustav, programe i podatke.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-box">
+          Promo: 10% popusta na sve SSD-ove!
+        </div>
+        <div class="sidebar-box">
+          Novi GPU modeli uskoro u ponudi.
+        </div>
+      </div>
+    </div>
+    <div id="novosti" style="padding: 50px; background-color: #fff;">
+      <h2>Novosti</h2>
+      <p>Nove serije matičnih ploča dolaze uskoro...</p>
+    </div>
+    <div id="kontakt" style="padding: 50px; background-color: #f1f1f1;">
+      <h2>Kontaktirajte nas</h2>
+      <p>Email: info@techstore.ba</p>
+    </div>
+    <div class="footer">
+      &copy; 2025 TechStore. Sva prava pridržana.
+    </div>
+  </div>
+</body>
+</html>
+
